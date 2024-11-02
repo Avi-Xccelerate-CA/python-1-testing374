@@ -13,6 +13,12 @@
 # HINT: using % operator to find remainder may be helpful
 def dose(needs):
     #YOUR SOLUTION STARTS HERE
+    if sum(needs)>=500:
+        return 'No medicine given'
+    for i in needs:
+        if i>=250:
+            return 'No medicine given'
+    return [(i//10,0) if i%10==0 else ((i//10)+1,10-i%10) for i in needs]
 
     #YOUR SOLUTION ENDS HERE
 
